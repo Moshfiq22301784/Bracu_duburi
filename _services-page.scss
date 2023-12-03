@@ -1,0 +1,172 @@
+
+/*------------------------------------------------- */
+/* =  Service page
+ *------------------------------------------------- */
+
+section.services-section {
+	padding: 100px 0 0;
+	h1 {
+		text-align: center;
+		font-size: 23px;
+		margin-bottom: 50px;
+		font-weight: 300;
+	}
+	.services-post {
+		display: flex;
+		align-items: center;
+		margin-bottom: 100px;
+		.image-holder {
+			width: 50%;
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+		.post-content {
+			width: 50%;
+			padding: 0 40px;
+			h2 {
+				font-size: 23px;
+				margin-bottom: 40px;
+				font-weight: 300;
+			}
+			p {
+				margin-bottom: 40px;
+				font-size: 15px;
+				font-family: $font-alternative3;
+				color: #000;
+			}
+			a {
+				color: #999999;
+				font-size: 17px;
+				font-family: $font-default;
+				text-transform: uppercase;
+				font-weight: 300;
+				letter-spacing: 0.6px;
+				margin-bottom: 0;
+				i {
+					margin-left: 10px;
+				}
+				&:hover {
+					color: $primary-color;
+				}
+			}
+		}
+	}
+}
+.accord-section {
+	padding-bottom: 160px;
+	h1 {
+		text-align: center;
+		font-size: 23px;
+		margin-bottom: 50px;
+		font-weight: 300;
+		text-transform: uppercase;
+	}
+	.accord-box {
+		padding-top: 240px;
+		@include retina('../upload/others/ser-ban2.jpg', 2, cover, center bottom no-repeat);
+		margin-bottom: 0;
+		border-bottom: 1px solid #ffffff;
+		.accordion {
+			max-width: 880px;
+			padding: 40px 40px 20px;
+			background: #ffffff;
+			margin: 0 auto -110px;
+			position: relative;
+			@include box-shadow(0 10px 20px rgba(0,0,0,0.05));
+			.card  {
+				border: none;
+				border-bottom: 1px solid #cbcbcb;
+				@include border-radius(0px);
+				margin-bottom: 20px;
+			}
+			.card-header {
+				padding: 0;
+				border: none;
+				background: none;
+				margin-bottom: 20px;
+				h2 {
+					button {
+						padding: 0;
+						display: block;
+						width: 100%;
+						position: relative;
+						text-align: left;
+						cursor: pointer;
+						text-decoration: none;
+						&:before {
+							content: '-';
+							font-family: $font-default;
+							font-size: 17px;
+							font-weight: 700;
+							color: #000;
+							position: absolute;
+							top: 1px;
+							right: 0;
+						}
+						&.collapsed:before {
+							content: '+';
+						}
+					}
+				}
+			}
+			.card-header button {
+				color: #000;
+				font-size: 17px;
+				font-family: $font-default;
+				text-transform: uppercase;
+				font-weight: 400;
+			}
+			.card-body {
+				padding: 0 0 20px 0;
+				font-size: 15px;
+				font-family: $font-alternative3;
+				color: #000;
+				line-height: 28px;
+			}
+		}
+	}
+}
+
+
+section.icons-services-section {
+	padding: 80px 0;
+	h1 {
+		text-align: center;
+		font-size: 23px;
+		margin-bottom: 50px;
+		font-weight: 300;
+		text-transform: uppercase;
+	}
+	.services-icon-post {
+		text-align: center;
+		a {
+			width: 170px;
+			height: 170px;
+			color: #696969;
+			font-size: 60px;
+			text-align: center;
+			line-height: 170px;
+			background: #ececec;
+			@include border-radius(50%);
+			margin-bottom: 30px;
+		}
+		h2 {
+			font-size: 17px;
+			font-weight: 300;
+			text-transform: uppercase;
+			letter-spacing: 1.5px;
+		}
+		p {
+			font-size: 15px;
+			font-family: $font-alternative3;
+			color: #000;
+			line-height: 28px;
+			max-width: 300px;
+			margin: 0 auto;
+		}
+	}
+}
+
+

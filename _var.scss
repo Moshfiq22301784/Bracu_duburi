@@ -1,0 +1,196 @@
+
+/*-------------------------------------------------
+ =  Table of Css
+
+ 1.Import google fonts & basic style of template
+ 2.Header
+ 3.Isotope filtering
+ 4.Kenburn slider basic
+ 5.General
+ 6.Photos Section grid & masonry
+ 7.portfolio section
+ 8.Home Album
+ 9.Home Gallery
+ 10.About section
+ 11.team section
+ 12.testimonial section
+ 13.News section
+ 14.Sidebar
+ 15.Gallery section
+ 16.About pages
+ 17.Service page
+ 18.Error page
+ 19.Comming soon page
+ 20.Contact page
+ 21.Footer
+ 22.dark skin
+ 23.Responsive part
+-------------------------------------------------*/
+
+/* import google fonts */
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Open+Sans:300,300i,400,400i,600,600i,700,700i|Oswald:200,300,400,500,600,700|Playfair+Display:400,400i,700,700i');
+
+//the default font in our template
+$font-default: 'Montserrat', sans-serif;
+
+//the second font in our template
+$font-alternative: 'Open Sans', sans-serif;
+
+//the third font in our template
+$font-alternative2: 'Oswald', sans-serif;
+
+//the third font in our template
+$font-alternative3: 'Playfair Display', serif;;
+
+//default color skin
+$primary-color: #ff9900;
+
+//default color skin 2
+$primary-color2: #9bc01c;
+
+//default color skin with opacity
+$primary-color-trans: rgba(255, 153, 0, 0.9);
+
+//text color 1 (some titles)
+$title-color: #222222;
+
+//text color 1 (some titles)
+$text-color: #696969;
+
+//reset element paddings and margins
+
+.reset-elem {
+    margin: 0;
+    padding: 0;
+}
+
+//default style for paragraphs in this template
+.paragraph {
+    font-size: 14px;
+    color: $text-color;
+    font-family: $font-alternative;
+    font-weight: 400;
+    line-height: 24px;
+    margin: 0 0 10px;
+}
+
+//default style for hading1 in this template
+.heading1 {
+    color: $title-color;
+    font-size: 23px;
+    font-family: $font-default;
+    font-weight: 700;
+    line-height: 36px;
+    margin: 0 0 30px;
+}
+
+//default style for hading2 in this template
+.heading2 {
+    color: $title-color;
+    font-size: 16px;
+    font-family: $font-default;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin: 0 0 10px;
+    line-height: 24px;
+}
+
+//default style for hading2 in this template
+.heading3 {
+    font-family: $font-alternative;
+    font-weight: 600;
+    font-size: 18px;
+    color: $title-color;
+    margin: 0 0 5px;
+    text-transform: uppercase;
+}
+
+//variable for radius corners
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+//variable for radius corners
+@mixin border-bottom-left-radius($radius) {
+    -webkit-border-bottom-left-radius: $radius;
+    -moz-border-bottom-left-radius: $radius;
+    -o-border-bottom-left-radius: $radius;
+    border-bottom-left-radius: $radius;
+}
+
+//variable for radius corners
+@mixin border-bottom-right-radius($radius) {
+    -webkit-border-bottom-right-radius: $radius;
+    -moz-border-bottom-right-radius: $radius;
+    -o-border-bottom-right-radius: $radius;
+    border-bottom-right-radius: $radius;
+}
+
+//variable for radius corners
+@mixin border-top-left-radius($radius) {
+    -webkit-border-top-left-radius: $radius;
+    -moz-border-top-left-radius: $radius;
+    -o-border-top-left-radius: $radius;
+    border-top-left-radius: $radius;
+}
+
+//variable for radius corners
+@mixin border-top-right-radius($radius) {
+    -webkit-border-top-right-radius: $radius;
+    -moz-border-top-right-radius: $radius;
+    -o-border-top-right-radius: $radius;
+    border-top-right-radius: $radius;
+}
+
+//variable for transitions
+@mixin transition($speed) {
+    transition: all $speed ease-in-out;
+    -moz-transition: all $speed ease-in-out;
+    -webkit-transition: all $speed ease-in-out;
+    -o-transition: all $speed ease-in-out;
+}
+
+//variable for tranform grow elem scale
+@mixin transform($scale) {
+    transform: scale($scale);
+    -webkit-transform: scale($scale);
+    -moz-transform: scale($scale);
+    -o-transform: scale($scale);
+}
+
+//box shadow  variable
+@mixin box-shadow($val) {
+    box-shadow: $val;
+    -webkit-box-shadow: $val;
+    -moz-box-shadow: $val;
+    -o-box-shadow: $val;
+}
+
+//animate transform rotate variable
+@mixin rotate($rotate) {
+    -webkit-transform: rotate($rotate);
+    -moz-transform: rotate($rotate);
+    -ms-transform: rotate($rotate);
+    -o-transform: rotate($rotate);
+    transform: rotate($rotate);
+}
+
+//background size cover
+.back-cover {
+    background-size: cover !important;
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover !important;
+}
+
+//default style for anchors in this template
+.anchor {
+    display: inline-block;
+    text-decoration: none !important;
+
+    @include transition(0.2s);
+}
+

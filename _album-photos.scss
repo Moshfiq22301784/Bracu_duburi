@@ -1,0 +1,75 @@
+
+/*------------------------------------------------- */
+/* =  Home Album
+ *------------------------------------------------- */
+
+section.album-section {
+	padding: 0 15px;
+	.album-box {
+		margin: -15px 0;
+		.album-post {
+			width: 33.33333%;
+			padding: 15px;
+			position: relative;
+			img {
+				width: 100%;
+				height: auto;
+			}
+			.gallery-link {
+				position: absolute;
+				top: 35px;
+				left: 35px;
+				right: 35px;
+				bottom: 35px;
+				text-align: center;
+				background: transparent;
+				@include transition(0.2s);
+				> a {
+					position: absolute;
+					display: inline-block;
+					top: 50%;
+					margin-top: -32px;
+					left: 50%;
+					margin-left: -88px;
+					width: 176px;
+					padding: 12px 5px;
+					background: rgba(255,255,255,0.9);
+					color: $title-color;
+					font-size: 30px;
+					font-family: $font-alternative2;
+					@include transition(0.2s);
+				}
+				> a:hover {
+					color: $primary-color;
+				}
+				span {
+					position: absolute;
+					display: block;
+					text-align: center;
+					left: 0;
+					bottom: 35px;
+					width: 100%;
+					color: $title-color;
+					font-size: 15px;
+					font-family: $font-alternative2;
+					opacity: 0;
+					@include transition(0.2s);
+					i {
+						margin-right: 5px;
+					}
+				}
+			}
+		}
+		.album-post:hover {
+			.gallery-link {
+				background: rgba(255,255,255,0.9);
+				> a {
+					background: transparent;
+				}
+				span {
+					opacity: 1;
+				}
+			}
+		}
+	}
+}

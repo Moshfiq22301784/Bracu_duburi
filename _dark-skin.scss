@@ -1,0 +1,176 @@
+
+/*------------------------------------------------- */
+/* =  dark skin
+*------------------------------------------------- */
+
+body.dark-skin {
+	background: #161619;
+	.navbar {
+		background: #161619 !important;
+		border-bottom: 1px solid #313135;
+	}
+	header.default-header .navbar,
+	header.fullscreen-style .navbar {
+		border-bottom: none;
+	}
+	.search-area .search-form input {
+		background: #242428;
+	}
+	.filter-area,
+	.filter-area .category-filter a {
+		color: #ffffff;
+	}
+	header a.open-close-menu span,
+	header.fullscreen-style a.open-close-fullmenu span,
+	header.left-style a.open-close-leftmenu span,
+	.left-menu nav.menu ul.navigate-menu li a:before,
+	header.gal-style a.toogle-link span,
+	header.portrait-font a.toogle-link span {
+		background: #fff;
+	}
+	header.gal-style .navbar-nav > li > a.active, header.gal-style .navbar-nav > li > a:hover,
+	header.portrait-font .navbar-nav > li > a.active, header.portrait-font .navbar-nav > li > a:hover {
+		color: $primary-color2 !important;
+	}
+	a.button-one,
+	footer a.go-top,
+	section.news-section .news-box .center-button a {
+		background: #343438;
+		color: #a2a2a2;
+		&:hover {
+			color: #fff;
+		}
+	}
+	footer {
+		border-top: 1px solid #313135;
+		p.copyright-line {
+			color: #fff;
+		}
+	}
+	footer.footer-box,
+	footer.footer-with-instagram {
+		border-top: none;
+	}
+	footer.footer-box .inner-footer {
+		border-top-color: #313135;
+	}
+	.fixed-vertical-header .inner-fixed-vertical {
+		background: #0e0e0e;
+	}
+	.fixed-vertical-header:before {
+		background: #37373d
+	}
+	.fixed-vertical-header .inner-fixed-vertical .navbar-vertical li a {
+		color: #8e8e8e;
+		&.active,
+		&:hover {
+			color: #fff;
+		}
+	}
+	.fixed-vertical-header .inner-fixed-vertical .navbar-vertical li {
+		border-bottom: 1px solid #272727;
+	}
+	.fixed-vertical-header .inner-fixed-vertical .navbar-vertical li ul.second-level {
+		border-top: 1px solid #272727;
+	}
+	.fixed-vertical-header .inner-fixed-vertical .widg-shutter h2,
+	.full-menu .bottom-menu-line p {
+		color: #fff;
+	}
+	.fixed-vertical-header .inner-fixed-vertical .widg-shutter p {
+		color: #8e8e8e;
+	}
+	.navbar-nav > li > a {
+		color: #fff !important;
+		&:hover,
+		&.active {
+			color: $primary-color !important;
+		}
+	}
+	header.default-header .search-area .search-form input,
+	.full-menu .bottom-menu-line .search-area .search-form input {
+		background: transparent;
+		border-bottom: 1px solid #313136;
+	}
+	.dropdown,
+	.full-menu,
+	.full-menu nav.menu ul.navigate-menu ul.second-level {
+		background: #161619;
+	}
+	.dropdown > li a {
+		color: #ffffff;
+		&:hover {
+			background: #272727;
+		}
+	}
+	.dropdown > li,
+	section.about-section .about-box,
+	section.news-section .news-box,
+	div.gal-style-section .gal-style-box {
+		border-bottom: 1px solid #313136;
+	}
+	.full-menu nav.menu ul.navigate-menu li a,
+	.full-menu .top-menu-line ul.social-icons li a,
+	section.photos-section.masonry ul.filter li a,
+	.left-menu nav.menu ul.navigate-menu li a,
+	section.photos-section.featured-works ul.filter li a {
+		&:hover,
+		&.active {
+			color: #fff;
+		}
+	}
+	header.left-style {
+		background: #0f0f11;
+	}
+	.left-menu,
+	.left-menu nav.menu ul.navigate-menu ul.second-level {
+		background: #090909;
+	}
+	h2,h1,
+	section.news-section .news-box .news-post .post-content h2 a,
+	section.testimonial-section .testimonial-box .testimonial-post .post-content p,
+	section.testimonial-section .testimonial-box .testimonial-post .post-content span,
+	div.gal-style-section .gal-style-box .photo-post .content-post .inner-content h2 {
+		color: #fff;
+	}
+	section.banner-section .banner-box h1,
+	section.team-section .team-box .team-post .hover-box .inner-hover h2 {
+		color: $title-color;
+	}
+	section.testimonial-section {
+		background: #1f1f23;
+	}
+	section.testimonial-section .testimonial-box .testimonial-post {
+		background: #161619;
+	}
+	section.testimonial-section .testimonial-box .owl-dots .owl-dot.active {
+		background: #ffffff;
+	}
+	.title-section p,
+	div.gal-style-section .gal-style-box .photo-post .content-post .inner-content p {
+		color: #c8c8c8;
+	}
+	header.gal-style .navbar {
+		background: #1d1d20 !important;
+	}
+}
+
+@media (max-width: 991px) {
+	body.dark-skin {
+		.navbar-nav {
+			background: #161619;
+		}
+		.dropdown {
+			background: transparent;
+			border: none;
+			li {
+				border: none;
+			}
+			li a {
+				background: transparent !important;
+			}
+		}
+	}
+}
+
+

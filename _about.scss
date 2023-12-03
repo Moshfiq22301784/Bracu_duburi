@@ -1,0 +1,209 @@
+
+/*------------------------------------------------- */
+/* =  About pages
+ *------------------------------------------------- */
+
+ section.about-me-section {
+ 	padding: 130px 0;
+ 	padding-left: 200px;
+    position: relative;
+ 	.about-box {
+ 		max-width: 560px;
+ 		h1 {
+ 			font-size: 30px;
+ 			font-weight: 400;
+ 			margin-bottom: 15px;
+ 		}
+ 		ul.social-icons {
+            @extend .reset-elem;
+            margin-bottom: 30px;
+            li {
+                display: inline-block;
+                margin-right: 20px;
+                a {
+                    color: #000000;
+                    font-size: 21px;
+                }
+                a:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+        p.desc {
+        	color: #696969;
+        	font-size: 21px;
+        	font-family: $font-alternative3;
+        	font-style: italic;
+        	line-height: 32px;
+        }
+        p {
+        	margin-bottom: 20px;
+        	font-size: 15px;
+        	font-family: $font-alternative3;
+        	color: #000;
+        	span {
+        		display: block;
+        		font-family: $font-default;
+        	}
+        }
+ 	}
+ 	div.image-holder {
+ 		position: absolute;
+ 		top: 0;
+ 		right: 0;
+ 		left: 50%;
+ 		bottom: 0;
+ 		overflow: hidden;
+ 		img {
+ 			width: 100%;
+ 			height: auto;
+ 		}
+ 	}
+}
+
+section.about-me-section2 {
+    .about-box-gal {
+        padding: 200px 0 170px;
+        @include retina('../upload/others/ab2.jpg', 2, cover, center bottom no-repeat);
+        h1 {
+            color: #000000;
+            font-size: 30px;
+            font-weight: 400;
+            margin-bottom: 20px;
+        }
+        p {
+            color: #000000;
+            font-size: 21px;
+            font-family: $font-alternative3;
+            font-style: italic;
+            line-height: 32px;
+            max-width: 530px;
+            margin-bottom: 30px;
+        }
+        ul.social-icons {
+            @extend .reset-elem;
+            margin-bottom: 0px;
+            li {
+                display: inline-block;
+                margin-right: 20px;
+                a {
+                    color: #000000;
+                    font-size: 21px;
+                }
+                a:hover {
+                    color: $primary-color;
+                }
+            }
+        }
+    }
+    .about-content {
+        padding: 60px 0 20px;
+        text-align: center;
+        p {
+            max-width: 920px;
+            margin: 0 auto 20px;
+            font-size: 17px;
+            font-family: $font-alternative3;
+            color: #000;
+            line-height: 30px;
+            span {
+                font-family: $font-default;
+                font-size: 15px;
+                margin: 0 10px;
+            }
+        }
+    }
+}
+
+h2.title-about-page {
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+section.about-page-section {
+    padding-top: 80px;
+    .about-us-box {
+        padding: 80px 0 60px;
+        position: relative;
+        .about-post {
+            margin-bottom: 30px;
+            text-align: center;
+            img {
+                max-width: 200px;
+                height: auto;
+                @include border-radius(50%);
+                margin-bottom: 25px;
+            }
+            h2 {
+                text-transform: uppercase;
+                font-size: 17px;
+                letter-spacing: 1.2px;
+            }
+            p {
+                max-width: 295px;
+                margin: 0 auto;
+                font-size: 15px;
+                font-family: $font-alternative3;
+                color: #000;
+                line-height: 26px;
+            }
+        }
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 570px;
+            height: 1px;
+            margin-left: -285px;
+            background: #e2e2e2;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 570px;
+            height: 1px;
+            margin-left: -285px;
+            background: #e2e2e2;
+        }
+    }
+}
+
+section.skills-section {
+    padding: 80px 0 60px;
+    background: #f1f1f1;
+    .skills-content {
+        p {
+            font-size: 17px;
+            font-family: $font-alternative3;
+            color: #000;
+            line-height: 28px;
+            margin-bottom: 20px;
+        }
+    }
+    .skills-box {
+        h2 {
+            text-transform: uppercase;
+            font-size: 17px;
+            font-weight: 300;
+            margin-bottom: 6px;
+            span {
+                float: right;
+            }
+        }
+        div.meter {
+            width: 100%;
+            background: #fff;
+            border-bottom: 1px solid #fff;
+            margin-bottom: 25px;
+            > p {
+                height: 7px;
+                background: #696969;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

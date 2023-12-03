@@ -1,0 +1,40 @@
+
+/*------------------------------------------------- */
+/* =  Error page
+ *------------------------------------------------- */
+
+section.error-section {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	text-align: center;
+	display: flex;
+	flex-direction: columns;
+	justify-content: center;
+	align-items: center;
+	@include retina('../upload/others/error.jpg', 2, cover, center center no-repeat);
+	h1 {
+		font-size: 43px;
+		line-height: 50px;
+		margin-bottom: 25px;
+	}
+	h2 {
+		font-size: 23px;
+		font-weight: 700;
+		line-height: 36px;
+		margin-bottom: 6px;
+	}
+	p {
+		color: #343434;
+		font-size: 15px;
+		font-family: $font-alternative3;
+		font-style: italic;
+		margin-bottom: 0;
+		a {
+			color: #343434;
+			text-decoration: underline !important;
+		}
+	}
+}

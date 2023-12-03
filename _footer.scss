@@ -1,0 +1,165 @@
+
+
+/*------------------------------------------------- */
+/* =  Footer */
+/*------------------------------------------------- */
+
+footer {
+	padding: 25px;
+	border-top: 1px solid #e6e6e6;
+	position: relative;
+	p {
+		margin: 0;
+	}
+	ul.social-icons {
+		@extend .reset-elem;
+		text-align: right;
+		li {
+			display: inline-block;
+			margin-left: 16px;
+			a {
+				color: #969696;
+				font-size: 17px;
+			}
+			a:hover {
+				color: #010101;
+			}
+		}
+	}
+	a.go-top {
+		display: inline-block;
+		width: 35px;
+		height: 35px;
+		font-size: 12px;
+		color: $text-color;
+		line-height: 33px;
+		text-align: center;
+		background: #e6e6e6;
+		position: absolute;
+		top: -70px;
+		right: 40px;
+		z-index: 2;
+		@include border-radius(50%);
+		opacity: 0;
+	}
+	a.go-top:hover {
+		color: #000;
+	}
+	a.go-top.active {
+		opacity: 1;
+	}
+}
+
+footer.footer-box {
+	border: none;
+	padding: 0;
+	.inner-footer {
+		padding: 25px 0;
+		border-top: 1px solid #e6e6e6;
+	}
+	a.go-top {
+		top: initial;
+		bottom: 20px;
+		right: 40px;
+	}
+}
+
+footer.footer-box.without-border {
+	.inner-footer {
+		border-top: none;
+		padding: 25px;
+	}
+}
+
+footer.footer-center {
+	border: none;
+	text-align: center;
+	a.go-top {
+		top: initial;
+		bottom: 20px;
+		right: 40px;
+	}
+}
+
+footer.footer-center.dark-style {
+	background: #222222;
+	p {
+		color: #fff;
+	}
+	a.go-top {
+		background: #606060;
+		color: #e6e6e6;
+	}
+	a.go-top:hover {
+		color: #000;
+		background: #fff;
+	}
+}
+
+footer.footer-with-instagram {
+	padding: 90px 0 0;
+	border-top: none;
+	div.insta-widget {
+		h1 {
+			text-align: center;
+			text-transform: uppercase;
+			font-weight: 400;
+		}
+		ul.instagram-list {
+			@extend .reset-elem;
+			overflow: hidden;
+			li {
+				float: left;
+				width: 16.6666%;
+				list-style: none;
+				a img {
+					width: 100%;
+					height: auto;
+				}
+				a {
+					position: relative;
+				}
+				a:after {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					opacity: 0;
+					background: rgba(255,255,255,0.9);
+					@include transition(0.3s);
+				}
+				a:hover:after {
+					top: 10px;
+					left: 10px;
+					right: 10px;
+					bottom: 10px;
+					opacity: 1;
+				}
+			}
+		}
+	}
+	.inner-footer {
+		background: #000000;
+		padding: 25px 0 22px;
+		p {
+			color: #fff;
+		}
+		ul.social-icons li {
+			a:hover {
+				color: #fff;
+			}
+		}
+	}
+	a.go-top {
+		top: initial;
+		bottom: 20px;
+		background: #606060;
+		color: #e6e6e6;
+	}
+	a.go-top:hover {
+		color: #000;
+		background: #fff;
+	}
+}

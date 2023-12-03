@@ -1,0 +1,64 @@
+
+/*------------------------------------------------- */
+/* =  testimonial section
+ *------------------------------------------------- */
+
+section.testimonial-section {
+	padding: 80px 0;
+	background: #eeeeee;
+	.testimonial-box {
+		margin-left: -15px;
+		margin-right: -15px;
+		.item {
+			padding: 0 15px;
+		}
+		.testimonial-post {
+			padding: 40px;
+			background: #fff;
+			display: flex;
+			img {
+				width: 130px;
+				height: 130px;
+				@include border-radius(50%);
+			}
+			.post-content {
+				margin-left: 30px;
+				p {
+					color: #343434;
+					margin-bottom: 15px;
+				}
+				h2 {
+					text-transform: uppercase;
+					font-weight: 700;
+					margin-bottom: -5px;
+				}
+				span {
+					display: inline-block;
+					color: $title-color;
+					font-size: 13px;
+					font-family: $font-alternative;
+					margin: 0;
+				}
+			}
+		}
+		.owl-nav {
+			display: none;
+		}
+		.owl-dots {
+			display: block;
+			text-align: center;
+			padding-top: 30px;
+			.owl-dot {
+				width: 30px;
+				height: 8px;
+				display: inline-block;
+				background: #969696;
+				margin: 0 5px;
+				outline: none;
+			}
+			.owl-dot.active {
+				background: #000000;
+			}
+		}
+	}
+}

@@ -1,0 +1,294 @@
+
+/*------------------------------------------------- */
+/* =  Photos Section grid & masonry
+ *------------------------------------------------- */
+
+section.photos-section {
+	padding: 40px;
+	.photos-box {
+		margin: -5px -5px 35px;
+		.photo-post {
+			width: 33.33333%;
+			padding: 5px;
+			position: relative;
+			img {
+				width: 100%;
+				height: auto;
+			}
+			.hover-box {
+				position: absolute;
+				bottom: 5px;
+				left: 5px;
+				right: 5px;
+				@include transition(0.2s);
+				opacity: 0;
+				.inner-hover {
+					width: 100%;
+					height: 100%;
+					padding: 20px;
+					padding-top: 60px;
+					background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+					display: flex;
+					justify-content: space-between;
+					overflow: hidden;
+					.title-post {
+						margin-left: -100%;
+						@include transition(0.3s);
+					}
+					h2 {
+						color: #fff;
+						margin-bottom: -5px;
+						font-size: 15px;
+						font-weight: 300;
+					}
+					span {
+						@extend .paragraph;
+						margin: 0;
+						font-size: 13px;
+						color: #fff;
+						font-weight: 300;
+					}
+					.share-like {
+						margin-top: 15px;
+						margin-right: -100%;
+						@include transition(0.3s);
+						position: relative;
+						a {
+							color: #fff;
+							font-size: 16px;
+							margin-left: 10px;
+							font-weight: 300;
+						}
+						a:hover {
+							color: $primary-color;
+						}
+						ul.share-list {
+							@extend .reset-elem;
+							position: absolute;
+							text-align: center;
+							opacity: 0;
+							visibility: hidden;
+							right: 0px;
+							top: -90px;
+							@include transition(0.2s);
+							li {
+								display: block;
+							}
+						}
+					}
+					.share-like:hover ul.share-list {
+						top: -70px;
+						visibility: visible;
+						opacity: 1;
+					}
+				}
+			}
+		}
+		.photo-post:hover {
+			.hover-box {
+				opacity: 1;
+				.inner-hover {
+					.title-post,
+					.share-like {
+						margin-left: 0;
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+section.photos-section.grid-boxed {
+	padding: 0;
+	.photos-box {
+		margin: -15px -15px 25px;
+		.photo-post {
+			width: 350px;
+			margin: 15px;
+			padding: 0;
+			position: relative;
+			img {
+				width: 100%;
+				height: auto;
+			}
+			.hover-box {
+				position: absolute;
+				top: 10px;
+				bottom: 10px;
+				left: 10px;
+				right: 10px;
+				background: rgba(255,255,255, 0.96);
+				text-align: center;
+				@include transition(0.2s);
+				opacity: 0;
+				h2 {
+					position: absolute;
+					top: 50%;
+					left: 0;
+					width: 100%;
+					margin-top: -12px;
+					font-size: 15px;
+					a {
+						color: $title-color;
+					}
+					a:hover {
+						color: $primary-color;
+					}
+				}
+				p {
+					position: absolute;
+					bottom: 20px;
+					left: 0;
+					margin: 0;
+					width: 100%;
+				}
+				a.likes {
+					color: $title-color;
+					font-size: 13px;
+					font-family: $font-default;
+				}
+				a.likes:hover {
+					color: $primary-color;
+				}
+			}
+		}
+		.photo-post:hover {
+			.hover-box {
+				opacity: 1;
+				.inner-hover {
+					.title-post,
+					.share-like {
+						margin-left: 0;
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+section.photos-section.masonry {
+	padding: 30px 85px 30px 170px;
+	ul.filter {
+		@extend .reset-elem;
+		text-align: center;
+		margin-bottom: 30px;
+		li {
+			display: inline-block;
+			margin-left: 10px;
+			a {
+				color: $text-color;
+				font-size: 13px;
+				font-family: $font-default;
+				font-weight: 700;
+				text-transform: uppercase;
+			}
+			a:hover {
+				color: $title-color;
+			}
+		}
+		li:before {
+			content: '|';
+			color: $text-color;
+			font-size: 13px;
+			font-family: $font-default;
+			font-weight: 700;
+			margin-right: 12px;
+		}
+		li:first-child {
+			margin-left: 0;
+		}
+		li:first-child:before {
+			display: none;
+			margin-right: 0;
+		}
+	}
+	.photos-box {
+		margin: 0 0 30px;
+		.photo-post {
+			width: 20%;
+			padding: 5px;
+			position: relative;
+			img {
+				width: 100%;
+				height: auto;
+			}
+			.hover-box {
+				position: absolute;
+				top: 15px;
+				bottom: 15px;
+				left: 15px;
+				right: 15px;
+				background: rgba(255,255,255, 1);
+				text-align: center;
+				@include transition(0.2s);
+				opacity: 0;
+				h2 {
+					position: absolute;
+					bottom: 30px;
+					left: 0;
+					width: 100%;
+					margin: 0;
+					font-size: 15px;
+					a {
+						color: $title-color;
+					}
+					a:hover {
+						color: $primary-color;
+					}
+				}
+				p {
+					position: absolute;
+					top: 30px;
+					left: 0;
+					margin: 0;
+					width: 100%;
+				}
+				a.likes {
+					color: $title-color;
+					font-size: 13px;
+					font-family: $font-default;
+				}
+				a.likes:hover {
+					color: $primary-color;
+				}
+			}
+		}
+		.photo-post:hover {
+			.hover-box {
+				opacity: 1;
+				.inner-hover {
+					.title-post,
+					.share-like {
+						margin-left: 0;
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+section.photos-section.featured-works {
+	padding: 100px 0;
+	ul.filter {
+		@extend .reset-elem;
+		text-align: center;
+		margin-bottom: 30px;
+		li {
+			display: inline-block;
+			margin: 0 5px;
+			a {
+				color: #969696;
+				font-size: 16px;
+				font-weight: 400;
+				font-family: $font-default;
+			}
+			a:hover,
+			a.active {
+				color: $title-color;
+			}
+		}
+	}
+}

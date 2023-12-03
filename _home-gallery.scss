@@ -1,0 +1,175 @@
+
+/*------------------------------------------------- */
+/* =  Home Gallery
+ *------------------------------------------------- */
+
+div.gal-style-section {
+	padding: 40px 40px 0;
+	ul.scroller-list {
+		@extend .reset-elem;
+		position: fixed;
+		right: 10px;
+		top: 50%;
+		margin-top: -50px;
+		width: 18px;
+		text-align: center;
+		z-index: 2;
+		li {
+			display: inline-block;
+			a {
+				display: inline-block;
+				width: 10px;
+				height: 10px;
+				background: #969696;
+				@include border-radius(50%);
+			}
+			a.active {
+				width: 16px;
+				height: 16px;
+				background: $primary-color2;
+			}
+		}
+	}
+	.gal-style-box {
+		border-bottom: 1px solid #dedede;
+		padding-bottom: 100px;
+		.photo-post {
+			display: flex;
+			align: items-center;
+			.image-box {
+				width: 50%;
+				img {
+					width: 100%;
+					height: 100%;
+				}
+			}
+			.content-post {
+				width: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				.inner-content {
+					max-width: 550px;
+					h2 {
+						color: #000;
+						font-size: 30px;
+						text-transform: uppercase;
+						margin-bottom: 20px;
+						font-weight: 300;
+					}
+					ul.tags-image {
+						@extend .reset-elem;
+						margin-bottom: 50px;
+						li {
+							display: inline-block;
+							margin-right: 3px;
+							a {
+								color: #969696;
+								font-size: 17px;
+								font-family: $font-default;
+								text-transform: uppercase;
+								font-weight: 300;
+							}
+							a:hover {
+								color: $primary-color2;
+							}
+						}
+						li:before {
+							content: '/';
+							color: #969696;
+							font-size: 17px;
+							font-family: $font-default;
+							margin-right: 4px;
+							font-weight: 300;
+						}
+						li:first-child:before {
+							display: none;
+						}
+					}
+					p {
+						color: #000;
+						line-height: 24px;
+						margin-bottom: 50px;
+					}
+					a.view-gal-link {
+						color: #969696;
+						font-size: 17px;
+						font-family: $font-default;
+						text-transform: uppercase;
+						font-weight: 300;
+						i {
+							margin-left: 16px;
+							@include transition(0.2s);
+						}
+					}
+					a.view-gal-link:hover {
+						color: $primary-color2;
+						i {
+							margin-left: 10px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* Initial state (hidden or anything else) */
+.cbp-so-init .cbp-so-side {
+	opacity: 0;
+	-webkit-transition: none;
+	-moz-transition: none;
+	transition: none;
+}
+
+.cbp-so-init .cbp-so-side-left {
+	-webkit-transform: translateX(-80px);
+	-moz-transform: translateX(-80px);
+	transform: translateX(-80px);
+}
+
+.cbp-so-init .cbp-so-side-right {
+	-webkit-transform: translateX(80px);
+	-moz-transform: translateX(80px);
+	transform: translateX(80px);
+}
+
+/* Animated state */
+/* add you final states (transition) or your effects (animations) for each side */
+.cbp-so-section.cbp-so-animate .cbp-so-side-left,
+.cbp-so-section.cbp-so-animate .cbp-so-side-right {
+	-webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+	-moz-transition: -moz-transform 0.5s, opacity 0.5s;
+	transition: transform 0.5s, opacity 0.5s;
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	transform: translateX(0px);
+	opacity: 1;
+}
+
+/* For example, add a delay for the right side:
+.cbp-so-section.cbp-so-animate .cbp-so-side-right {
+	-webkit-transition-delay: 0.2s;
+	-moz-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+*/
+
+/* Example media queries */
+
+@media screen and (max-width: 73.5em) {
+	.cbp-so-scroller {
+		font-size: 65%;
+	}
+}
+
+@media screen and (max-width: 41.125em) {
+	.cbp-so-side {
+		float: none;
+		width: 100%;
+	}
+}
+
+
+
+
